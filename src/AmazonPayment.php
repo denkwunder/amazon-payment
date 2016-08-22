@@ -45,6 +45,10 @@ class AmazonPayment {
 			$params['OrderReferenceAttributes.SellerNote'] = $data['note'];
 		}
 
+		if (isset($data['currency'])) {
+			$params['OrderReferenceAttributes.OrderTotal.CurrencyCode'] = $data['currency'];
+		}
+
 		$resp = $this->client->setupAmazonCall('SetOrderReferenceDetails', $params);
 
 		return [
