@@ -24,9 +24,9 @@ class AmazonPaymentClient {
 		$this->secretKey = $config['secret_key'];
 
 		if ($config['sandbox_mode'] === true) {
-			$this->serviceUrl = 'https://mws.amazonservices.com/OffAmazonPayments_Sandbox/2013-01-01';
+			$this->serviceUrl = 'https://mws-eu.amazonservices.com/OffAmazonPayments_Sandbox/2013-01-01';
 		} else {
-			$this->serviceUrl = 'https://mws.amazonservices.com/OffAmazonPayments/2013-01-01';
+			$this->serviceUrl = 'https://mws-eu.amazonservices.com/OffAmazonPayments/2013-01-01';
 		}
 	}
 
